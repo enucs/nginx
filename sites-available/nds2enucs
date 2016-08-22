@@ -1,0 +1,17 @@
+server {
+    listen      80;
+    server_name napierdevsoc.uk www.napierdevsoc.uk;
+    return      301 http://enucs.org.uk$request_uri;
+}
+
+server {
+    listen      80;
+    server_name slack2irc.napierdevsoc.uk;
+    return      301 http://slack2irc.enucs.org.uk$request_uri;
+}
+
+server {
+    listen      80;
+    server_name wiki.napierdevsoc.uk;
+    return      301 http://wiki.enucs.org.uk$request_uri;
+}

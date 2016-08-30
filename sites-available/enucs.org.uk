@@ -2,7 +2,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
-    server_name enucs.org.uk;
+    server_name enucs.org.uk enuws.org.uk;
 
     location / {
         root /home/wyrdathru/django-cms;

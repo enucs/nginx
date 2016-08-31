@@ -1,0 +1,22 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name enuws.org.uk;
+
+    location / {
+        root /home/wyrdathru/django-cms;
+        include uwsgi_params;
+        uwsgi_pass unix:/tmp/enuws.sock;
+    }
+
+    location /static {
+	alias /home/wyrdathru/django-cms/static;
+        expires 1d;
+    }
+
+    location /media {
+        alias /home/wyrdathru/django-cms/media;
+        expires 1d;
+    }
+}

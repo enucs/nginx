@@ -1,4 +1,10 @@
 server {
+    listen      80;
+    server_name www.enucs.org.uk;
+    return      301 http://enucs.org.uk$request_uri;
+}
+
+server {
     listen 80 default_server;
     listen [::]:80 default_server;
 

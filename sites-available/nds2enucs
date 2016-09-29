@@ -6,6 +6,12 @@ server {
 
 server {
     listen      80;
+    server_name compsoc.napier.ac.uk www.compsoc.napier.ac.uk;
+    return      301 http://enucs.org.uk$request_uri;
+}
+
+server {
+    listen      80;
     server_name slack2irc.napierdevsoc.uk;
     return      301 http://slack2irc.enucs.org.uk$request_uri;
 }
